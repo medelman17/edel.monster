@@ -12,25 +12,33 @@ importers:
     specifiers:
       '@sanity/base': ^2.21.10
       '@sanity/cli': ^2.21.10
+      '@sanity/components': ^2.14.0
       '@sanity/core': ^2.21.11
       '@sanity/default-layout': ^2.21.10
       '@sanity/default-login': ^2.21.10
       '@sanity/desk-tool': ^2.21.10
+      '@sanity/production-preview': ^2.15.0
       '@sanity/vision': ^2.21.10
       prop-types: ^15.7
       react: ^17.0
       react-dom: ^17.0
+      react-icons: ^4.3.1
+      sanity-plugin-iframe-pane: ^1.0.9
       styled-components: ^5.2.0
     dependencies:
       '@sanity/base': 2.21.10_625185cb104c53dd960b8025c62cc00a
+      '@sanity/components': 2.14.0
       '@sanity/core': 2.21.11_react-dom@17.0.2+react@17.0.2
       '@sanity/default-layout': 2.21.10_625185cb104c53dd960b8025c62cc00a
       '@sanity/default-login': 2.21.10_7a082f7d10047d47195aea793f958a14
       '@sanity/desk-tool': 2.21.10_e41f0928a2037eff78a216562884fa9b
+      '@sanity/production-preview': 2.15.0
       '@sanity/vision': 2.21.10_e41f0928a2037eff78a216562884fa9b
       prop-types: 15.7.2
       react: 17.0.2
       react-dom: 17.0.2_react@17.0.2
+      react-icons: 4.3.1_react@17.0.2
+      sanity-plugin-iframe-pane: 1.0.14_7a082f7d10047d47195aea793f958a14
       styled-components: 5.3.3_react-dom@17.0.2+react@17.0.2
     devDependencies:
       '@sanity/cli': 2.21.10
@@ -2486,6 +2494,10 @@ packages:
     resolution: {integrity: sha512-miq04+tp9I0/k8TooM/iB1ifpjVaWke9Pg+GD4SbrZ+YQkqaMqQFvzu4JjPr55lMkBrzOjE4JHrwBO/bzgottw==}
     dev: false
 
+  /@sanity/components/2.14.0:
+    resolution: {integrity: sha512-D8t7l+exvw1cg80m8yDZDRboAI6L827FeCacGjTOdElvgrR2shtsbepYui7ODfRgx9ynAceNDsQ1VSNnUgIHug==}
+    dev: false
+
   /@sanity/core/2.21.11_react-dom@17.0.2+react@17.0.2:
     resolution: {integrity: sha512-ACfcx9cy08DXXD6Nn0PLllqPq1/0I4S0Po1/y/6Z3bLoKKkyOs2MhaJFs009NgG9PrqENreBc+f6s2rm8MgumQ==}
     engines: {node: '>=12.0.0'}
@@ -2905,6 +2917,10 @@ packages:
       styled-components: 5.3.3_react-dom@17.0.2+react@17.0.2
     transitivePeerDependencies:
       - react-dom
+    dev: false
+
+  /@sanity/production-preview/2.15.0:
+    resolution: {integrity: sha512-qwhxogxfXeKmWLf4gqh0XEhLD+zEzX3YYHunJqVnT0K1SvRgSQce81zF7Zau8mZI1vPuNaUO+g+DzHs3p/wYTg==}
     dev: false
 
   /@sanity/react-hooks/2.21.10_56a6cd41a39c239df9e6caab532ee905:
@@ -10202,6 +10218,14 @@ packages:
       react: 17.0.2
     dev: false
 
+  /react-icons/4.3.1_react@17.0.2:
+    resolution: {integrity: sha512-cB10MXLTs3gVuXimblAdI71jrJx8njrJZmNMEMC+sQu5B/BIOmlsAjskdqpn81y8UBVEGuHODd7/ci5DvoSzTQ==}
+    peerDependencies:
+      react: '*'
+    dependencies:
+      react: 17.0.2
+    dev: false
+
   /react-intersection-observer/8.32.2_react@17.0.2:
     resolution: {integrity: sha512-QTcea+n28AvOHbTku+jErfQqknbc4Nuh7EUNik8p/JMN56W2Jhjs+qcYZzQhAoyLX8pZD0QXpYX0lW87faackQ==}
     peerDependencies:
@@ -10834,6 +10858,21 @@ packages:
     engines: {node: '>=10'}
     dependencies:
       diff-match-patch: 1.0.5
+    dev: false
+
+  /sanity-plugin-iframe-pane/1.0.14_7a082f7d10047d47195aea793f958a14:
+    resolution: {integrity: sha512-SEA0JIrn5rHM/2QlkfvrD6jHkEgAKx+aZtq9w5/6tuuloiHq7F9987lHko5Y7x7l2IZJsaV8/QSRtM/giLSaJw==}
+    peerDependencies:
+      react: ^17.0.2
+    dependencies:
+      '@sanity/icons': 1.2.1_react@17.0.2
+      '@sanity/ui': 0.36.15_7a082f7d10047d47195aea793f958a14
+      prop-types: 15.7.2
+      react: 17.0.2
+      usehooks-ts: 1.2.0_react@17.0.2
+    transitivePeerDependencies:
+      - react-dom
+      - styled-components
     dev: false
 
   /sax/1.2.4:
@@ -12167,6 +12206,14 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: false
     optional: true
+
+  /usehooks-ts/1.2.0_react@17.0.2:
+    resolution: {integrity: sha512-9FuA+AEkmv7Je+EGJbclkMjkI892Ijcvfv8btt5z8tTZu4EL/ebDVnqz6LPgYBSC+RONJkdly6ZxFb3oKb8QcQ==}
+    peerDependencies:
+      react: '>=16.8.0'
+    dependencies:
+      react: 17.0.2
+    dev: false
 
   /user-home/2.0.0:
     resolution: {integrity: sha1-nHC/2Babwdy/SGBODwS4tJzenp8=}

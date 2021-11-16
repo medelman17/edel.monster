@@ -1,5 +1,4 @@
 {
-    "rewrites": [
-        {"source": "/studio/:match*", "destination": "https://edel-monster-studio.vercel.app/:match*"}
-    ]
+	"version": 2,
+	"rewrites": [{ "source": "/studio/(.*)", "destination": "https://studio.edel.monster/(.*)" }]
 }

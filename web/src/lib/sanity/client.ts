@@ -1,7 +1,6 @@
 import sanity from '@sanity/client';
 import type { SanityClient as SC } from '@sanity/client';
 // import getImageUrlBuilder from '@sanity/image-url';
-import type { ISanityBuilder, QueryBuilder } from './query';
 import type { ClientConfig } from './types';
 
 class SanityClient {
@@ -20,13 +19,6 @@ class SanityClient {
 			SanityClient.self = this;
 		}
 		return SanityClient.self;
-	}
-
-	async execute<Result, Params extends any = unknown, Op extends ISanityBuilder = QueryBuilder>(
-		operation: Op,
-		params: Params
-	): Promise<Result> {
-		return this.sanity.fetch(operation.build(), params);
 	}
 
 	async query<QueryResult extends any = unknown, Params extends any = unknown>(

@@ -35,5 +35,7 @@ export default {
       type: "boolean",
       // makes it easy to reference only people who are authors in article documents
     },
+    { title: "Github URL", name: "githubUrl", type: "url" },
+    { title: "Twitter URL", name: "twitterUrl", type: "url" },
   ],
 };

@@ -15,6 +15,11 @@ export default {
       type: "string",
     },
     {
+      name: "hideTitle",
+      title: "Hide title",
+      type: "boolean",
+    },
+    {
       name: "slug",
       title: "Slug",
       type: "slug",

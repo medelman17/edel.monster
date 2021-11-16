@@ -1,7 +1,7 @@
 import SanityClient from './client';
 import * as api from './api';
 export { default as groq } from 'groq';
-export * from './query';
+
 export * from './types';
 export * from './schema';
 

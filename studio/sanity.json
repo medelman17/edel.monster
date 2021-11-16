@@ -2,7 +2,6 @@
   "root": true,
   "project": {
     "name": "edel.monster",
-    "basePath": "/studio"
   },
   "api": {
     "projectId": "akuwr6eg",

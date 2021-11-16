@@ -1,0 +1,5 @@
+{
+    "rewrites": [
+        {"source": "/studio/:match*", "destination": "https://studio.edel.monster/:match*"}
+    ]
+}

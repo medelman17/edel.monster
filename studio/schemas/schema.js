@@ -12,7 +12,7 @@ import hero from "./hero";
 import link from "./link";
 import navigation from "./navigation";
 import navigationItem from "./navigationItem";
-import navigationLink from "./navigationLink";
+// import navigationLink from "./navigationLink";
 import page from "./page";
 import person from "./person";
 import portableText from "./portableText";
@@ -34,7 +34,7 @@ export default createSchema({
     link,
     navigation,
     navigationItem,
-    navigationLink,
+    // navigationLink,
     page,
     person,
     portableText,

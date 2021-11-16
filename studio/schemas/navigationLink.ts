@@ -1,6 +1,6 @@
 // navigationLink.js
 export default {
-  name: "navigation.link",
+  name: "navigationLink",
   type: "object",
   title: "Link",
   preview: {

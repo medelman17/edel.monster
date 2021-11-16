@@ -19,5 +19,10 @@ export default {
         auto: true,
       },
     },
+    {
+        name: 'description',
+        type: 'text',
+        title: 'Description'
+      }
   ],
 };

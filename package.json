@@ -1,0 +1,14 @@
+{
+    "name": "edel.monster",
+    "private": true,
+    "version": "0.0.1",
+    "scripts": {
+        "dev-studio": "cd studio && pnpm run start",
+        "dev-web": "cd web && pnpm run dev",
+        "dev": "concurrently \"pnpm:dev-*\"",
+        "preview": "cd web && pnpm run preview"
+    },
+    "devDependencies": {
+        "concurrently": "^6.4.0"
+    }
+}

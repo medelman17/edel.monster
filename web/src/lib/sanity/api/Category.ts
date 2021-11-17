@@ -22,8 +22,8 @@ const ListCategoryQuery = groq`{
 }`;
 
 export type ListCategoryQueryInput = {
-	offset: string;
-	limit: string;
+	offset: number;
+	limit: number;
 };
 
 export const list = (input: ListCategoryQueryInput): Promise<any> => {

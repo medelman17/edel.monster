@@ -1,10 +1,10 @@
 <script lang="ts" context="module">
-	import View from '$lib/components/View.svelte';
-	import VStack from '$lib/components/StackVertical.svelte';
-	import HStack from '$lib/components/StackHorizontal.svelte';
 	// import HeadingOne from '$lib/components/HeadingOne.svelte'
-	import type { people, config as cfg } from '$lib/sanity/api';
+	// import type { people, config as cfg } from '$lib/sanity/api';
 	import type { LoadInput } from '@sveltejs/kit';
+
+	export const hydrate = false;
+	export const prerender = true;
 
 	export const load = async ({ stuff, fetch, page: { params } }: LoadInput) => {
 		const res = await fetch(`/api/people/${params.slug}.json`);
@@ -14,6 +14,9 @@
 </script>
 
 <script lang="ts">
+	import View from '$lib/components/View.svelte';
+	import VStack from '$lib/components/StackVertical.svelte';
+	import HStack from '$lib/components/StackHorizontal.svelte';
 	export let person: any;
 	// export let config: cfg.GetConfigQueryResult;
 </script>

@@ -1,10 +1,8 @@
 <script lang="ts" context="module">
-	import VStack from '$lib/components/StackVertical.svelte';
-	import HStack from '$lib/components/StackHorizontal.svelte';
-	import HeadingOne from '$lib/components/HeadingOne.svelte';
 	import type { page, config } from '$lib/sanity/api';
 	import type { LoadInput } from '@sveltejs/kit';
 
+	export const hydrate = false;
 	export const prerender = true;
 
 	export const load = async ({
@@ -19,6 +17,9 @@
 </script>
 
 <script lang="ts">
+	import VStack from '$lib/components/StackVertical.svelte';
+	import HStack from '$lib/components/StackHorizontal.svelte';
+	import HeadingOne from '$lib/components/HeadingOne.svelte';
 	export let page: page.GetPageQueryResult;
 	// export let config: config.GetConfigQueryResult;
 </script>

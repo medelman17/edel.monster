@@ -22,8 +22,8 @@ const ListPeopleQuery = groq`{
 }`;
 
 export type ListPeopleQueryInput = {
-	offset: string;
-	limit: string;
+	offset: number;
+	limit: number;
 };
 
 export const list = (input: ListPeopleQueryInput): Promise<any> => {

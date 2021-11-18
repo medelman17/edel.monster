@@ -36,7 +36,7 @@
 		"check:watch": "svelte-check --tsconfig ./tsconfig.json --watch",
 		"prestorybook": "pnpm run build:scss && pnpm run build:postcss",
 		"storybook": "pnpm run build:scss && pnpm run build:postcss && start-storybook -p 6006 -s static",
-		"build:storybook": "pnpm run build:scss && pnpm run build:postcss && build-storybook -c .storybook -o public -s static",
+		"build:storybook": "npm run build:scss && npm run build:postcss && build-storybook -c .storybook -o public -s static",
 		"prebuild:storybook": "npm run test:generate-output",
 		"build-storybook": "build-storybook",
 		"package": "pnpm run build:scss && pnpm run build:postcss && svelte-kit package",

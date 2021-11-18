@@ -73,6 +73,7 @@
 	"type": "module",
 	"svelte": "index.js",
 	"jest": {
+        "setupFilesAfterEnv": ["@testing-library/jest-dom/extend-expect"],
 		"transform": {
 			"^.+\\.svelte$": [
 				"svelte-jester",

@@ -25,4 +25,6 @@
 	let selected = options[as];
 </script>
 
-<svelte:component this={selected} />
+<svelte:component this={selected}>
+	<slot />
+</svelte:component>

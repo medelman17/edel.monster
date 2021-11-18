@@ -1,2 +1,3 @@
 import Text from './components/Text.svelte';
-export { Text };
+import Heading from './components/Heading.svelte';
+export { Text, Heading };

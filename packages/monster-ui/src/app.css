@@ -1,0 +1,260 @@
+/* Write your global styles here, in PostCSS syntax */
+:root {
+	--top-offset: 6rem;
+	--nav-h: 6rem;
+}
+
+@media screen and (min-width: 768px) {
+	:root {
+		--side-page: 14vw;
+		--top-offset: 10rem;
+		--side-nav: 4.8rem;
+	}
+}
+
+.theme-default {
+	--bg: #232635;
+	--bg-light: #292d3e;
+	--prime: #82aaff;
+	--second: #ffcf1b;
+	--flash: #40b3ff;
+	--heading: var(--second);
+	--text: #eeffff;
+	--text-second: rgba(255, 255, 255, 0.75);
+	--link: #82aaff;
+	--border-w: 0.3rem; /* border-width  */
+	--border-r: 0.4rem; /* border-radius */
+}
+
+.typo-default {
+	--code-fs: 1.3rem;
+	--h6: 1rem;
+	--h5: 1rem;
+	--h4: 1rem; /* default font-size */
+	--h3: 1.625rem;
+	--h2: 2.625rem;
+	--h1: 4.25rem;
+	--linemax: 80ch; /* max line-length */
+	--lh: 2; /* base line-height */
+}
+
+@font-face {
+	font-family: 'MonoLisa';
+	font-style: normal;
+	font-weight: 300;
+	font-display: swap;
+	src: local('MonoLisa'), url('/fonts/MonoLisa-Light.woff2') format('woff2'),
+		url('/fonts/MonoLisa-Light.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'MonoLisa';
+	font-style: italic;
+	font-weight: 300;
+	font-display: swap;
+	src: local('MonoLisa'), url('/fonts/MonoLisa-LightItalic.woff2') format('woff2'),
+		url('/fonts/MonoLisa-LightItalic.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'MonoLisa';
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: local('MonoLisa'), url('/fonts/MonoLisa-Regular.woff2') format('woff2'),
+		url('/fonts/MonoLisa-Regular.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'MonoLisa';
+	font-style: italic;
+	font-weight: 400;
+	font-display: swap;
+	src: local('MonoLisa'), url('/fonts/MonoLisa-RegularItalic.woff2') format('woff2'),
+		url('/fonts/MonoLisa-RegularItalic.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'MonoLisa';
+	font-style: normal;
+	font-weight: 500;
+	font-display: swap;
+	src: local('MonoLisa'), url('/fonts/MonoLisa-Medium.woff2') format('woff2'),
+		url('/fonts/MonoLisa-Medium.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'MonoLisa';
+	font-style: italic;
+	font-weight: 500;
+	font-display: swap;
+	src: local('MonoLisa'), url('/fonts/MonoLisa-MediumItalic.woff2') format('woff2'),
+		url('/fonts/MonoLisa-MediumItalic.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'MonoLisa';
+	font-style: normal;
+	font-weight: 700;
+	font-display: swap;
+	src: local('MonoLisa'), url('/fonts/MonoLisa-Bold.woff2') format('woff2'),
+		url('/fonts/MonoLisa-Bold.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'MonoLisa';
+	font-style: normal;
+	font-weight: 700;
+	font-display: swap;
+	src: local('MonoLisa'), url('/fonts/MonoLisa-Bold.woff2') format('woff2'),
+		url('/fonts/MonoLisa-Bold.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'MonoLisa';
+	font-style: italic;
+	font-weight: 700;
+	font-display: swap;
+	src: local('MonoLisa'), url('/fonts/MonoLisa-BoldItalic.woff2') format('woff2'),
+		url('/fonts/MonoLisa-BoldItalic.woff') format('woff');
+}
+
+body {
+	--font: 'MonoLisa', sans-serif;
+	--font-mono: 'MonoLisa', monospace;
+}
+
+html {
+	font-size: 62.5%;
+	-webkit-text-size-adjust: 100%;
+	-ms-overflow-style: -ms-autohiding-scrollbar;
+	box-sizing: border-box;
+	border-collapse: collapse;
+	line-height: 2;
+}
+
+#svelte {
+	width: 100%;
+	height: 100%;
+}
+
+* {
+	box-sizing: inherit;
+	margin: 0;
+	padding: 0;
+}
+
+/*	link reset ----------------------------- */
+a {
+	text-decoration: none;
+	cursor: pointer;
+	color: inherit;
+}
+
+a:hover,
+a:active {
+	color: var(--flash);
+}
+
+body {
+	font: 300 var(--h4) / var(--lh) var(--font);
+	background-color: var(--bg);
+	color: var(--text);
+	font-family: 'MonoLisa';
+}
+
+h1,
+.h1 {
+	color: var(--second);
+	font-size: 4.25rem;
+	font-weight: 700;
+	line-height: 6rem;
+	margin-top: 2rem;
+	padding-bottom: 4rem;
+	font-family: 'MonoLisa';
+}
+
+h2,
+.h2 {
+	color: var(--heading);
+	font-size: 2.625rem;
+	font-weight: 700;
+	line-height: 4rem;
+	margin-top: 2rem;
+	padding-bottom: 2rem;
+}
+
+h3,
+.h3 {
+	color: var(--heading);
+	font-size: 1.625rem;
+	font-weight: 700;
+	line-height: 2rem;
+	margin-top: 2rem;
+	padding-bottom: 0rem;
+}
+
+h4,
+.h4 {
+	color: var(--heading);
+	font-size: 1rem;
+	font-weight: 700;
+	line-height: 2rem;
+	margin-top: 2rem;
+	padding-bottom: 0rem;
+}
+
+h5,
+.h5 {
+	color: var(--heading);
+	font-size: 1rem;
+	font-weight: 700;
+	line-height: 2rem;
+	margin-top: 2rem;
+	padding-bottom: 0rem;
+}
+
+p,
+ul,
+ol,
+pre,
+table,
+blockquote {
+	margin-bottom: 2rem;
+	margin-top: 0rem;
+}
+ul ul,
+ol ol,
+ul ol,
+ol ul {
+	margin-bottom: 0rem;
+	margin-top: 0rem;
+}
+
+hr,
+.hr {
+	border: 1px solid;
+	margin: -1px 0;
+}
+a,
+b,
+i,
+strong,
+em,
+small,
+code {
+	line-height: 0;
+}
+
+sub,
+sup {
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+sup {
+	top: -0.5em;
+}
+sub {
+	bottom: -0.25em;
+}

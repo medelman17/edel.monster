@@ -24,7 +24,15 @@
 		"checkJs": true,
 		"paths": {
 			"$lib": ["src/lib"],
-			"$lib/*": ["src/lib/*"]
+			"$lib/*": ["src/lib/*"],
+			"$types": ["src/types"],
+			"$types/*": ["src/types/*"],
+			"$utils/*": ["src/lib/utils/*"],
+			"$actions/*": ["src/lib/actions/*"],
+			"$components/*": ["src/lib/components/*"],
+			"$blocks/*": ["src/lib/blocks/*"],
+			"$icons/*": ["src/lib/icons/*"],
+			"$sanity/*": ["src/lib/sanity/*"]
 		}
 	},
 	"include": ["src/**/*.d.ts", "src/**/*.js", "src/**/*.ts", "src/**/*.svelte"]

@@ -8,20 +8,30 @@
 		"check": "svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-check --tsconfig ./tsconfig.json --watch",
 		"lint": "prettier --ignore-path .gitignore --check --plugin-search-dir=. . && eslint --ignore-path .gitignore .",
-		"format": "prettier --ignore-path .gitignore --write --plugin-search-dir=. ."
+		"format": "prettier --ignore-path .gitignore --write --plugin-search-dir=. .",
+		"storybook": "start-storybook -p 6006",
+		"build-storybook": "build-storybook"
 	},
 	"devDependencies": {
+		"@babel/core": "^7.16.0",
 		"@portabletext/svelte": "^0.2.0",
 		"@sanity/client": "^2.21.10",
 		"@sanity/image-url": "^1.0.1",
 		"@sentry/browser": "^6.15.0",
 		"@sentry/node": "^6.15.0",
 		"@sentry/tracing": "^6.15.0",
+		"@sindresorhus/slugify": "^2.1.0",
+		"@storybook/addon-actions": "^6.3.12",
+		"@storybook/addon-essentials": "^6.3.12",
+		"@storybook/addon-links": "^6.3.12",
+		"@storybook/addon-svelte-csf": "^1.1.0",
+		"@storybook/svelte": "^6.3.12",
 		"@sveltejs/adapter-vercel": "^1.0.0-next.31",
 		"@sveltejs/kit": "next",
 		"@typescript-eslint/eslint-plugin": "^4.31.1",
 		"@typescript-eslint/parser": "^4.31.1",
 		"autoprefixer": "^10.3.7",
+		"babel-loader": "^8.2.3",
 		"cssnano": "^5.0.8",
 		"dotenv": "^10.0.0",
 		"eslint": "^7.32.0",
@@ -33,8 +43,9 @@
 		"prettier": "^2.4.1",
 		"prettier-plugin-svelte": "^2.4.0",
 		"sanity-codegen": "^0.9.8",
-		"svelte": "^3.42.6",
+		"svelte": "^3.44.1",
 		"svelte-check": "^2.2.6",
+		"svelte-loader": "^3.1.2",
 		"svelte-preprocess": "^4.9.8",
 		"svelte-scrollto": "^0.2.0",
 		"tslib": "^2.3.1",
@@ -42,6 +53,5 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"prismjs": "^1.25.0"
-	}
+		"prismjs": "^1.25.0"	}
 }

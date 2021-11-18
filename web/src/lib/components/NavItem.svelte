@@ -1,14 +1,26 @@
 <script lang="ts">
-	import { page } from '$app/stores';
-	export let path: string = '/';
-	export let label: string;
+	import { getContext } from 'svelte';
+	import type { NavItemProps, NavSegment } from '$types';
+
+	export let segment: NavItemProps['segment'] = null;
+	export let external: NavItemProps['external'] = null;
+	export let title: NavItemProps['title'] = null;
+
+	const current = getContext<NavSegment>('nav');
 </script>
 
-<li class:active={$page.path === path}>
-	<a sveltekit:prefetch href={path}>{label}</a>
-</li>
+{#if external}
+	<li><a href={external}><slot /></a></li>
+{:else}
+	<li class:active={current === segment}>
+		<a sveltekit:prefetch href={segment} {title}><slot /></a>
+	</li>
+{/if}
 
-<style lang="postcss">
+<!-- <li class:active={$page.path === path}>
+	<a sveltekit:prefetch href={path}>{label}</a>
+</li> -->
+<!-- <style lang="postcss">
 	li {
 		position: relative;
 		height: 100%;
@@ -34,4 +46,4 @@
 	a:hover {
 		color: var(--color-text-link-hover);
 	}
-</style>
+</style> -->

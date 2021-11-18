@@ -10,7 +10,7 @@
 		tracesSampleRate: 1.0
 	});
 
-	export const load = async ({ stuff, fetch, page: { params } }: LoadInput) => {
+	export const load = async ({ fetch }: LoadInput) => {
 		const res = await fetch(`/api/config.json`);
 		const config = await res.json();
 		return { props: { config }, stuff: { config } };
@@ -19,13 +19,34 @@
 
 <script lang="ts">
 	import '../app.css';
+	import { page, navigating, session } from '$app/stores';
 	import View from '$lib/components/View.svelte';
 	import Header from '$lib/components/Header.svelte';
+	import Nav from '$lib/components/Nav.svelte';
+	import NavItem from '$lib/components/NavItem.svelte';
 
 	export let config: cfg.GetConfigQueryResult;
+	export let segment: any;
 </script>
+
+{#if $navigating && $navigating.to}
+	<div>Preloading Indicator...</div>
+{/if}
 
 <View>
 	<Header nav={[...config.navigation.items]} />
 	<slot />
 </View>
+
+<!-- <Nav {segment} {page} logo="">
+	<NavItem segment="blog">Blog</NavItem>
+	<NavItem segment="about">About</NavItem>
+	<NavItem segment="contact">Contact</NavItem>
+</Nav> -->
+
+<!-- <main><slot /></main> -->
+<style>
+	main {
+		position: relative;
+	}
+</style>

@@ -1,0 +1,46 @@
+{
+  "name": "@edelman/monster-sanity-schema",
+  "version": "0.0.1",
+  "description": "A collection of structured content schema and primitives for use with sanityio",
+  "type": "module",
+  "module": "index.mjs",
+  "svelte": "index.mjs",
+  "scripts": {
+    "test": "mocha -r esm test/unit/**"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/medelman17/edel.monster.git"
+  },
+  "author": "Michael Edelman",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/medelman17/edel.monster/issues"
+  },
+  "homepage": "https://github.com/medelman17/edel.monster#readme",
+  "devDependencies": {
+    "esm": "^3.2.25",
+    "mocha": "^8.3.0",
+    "svelte": "^3.9.2"
+  },
+  "dependencies": {
+    "@sindresorhus/slugify": "^0.9.1",
+    "golden-fleece": "^1.0.9"
+  },
+  "files": [
+    "index.mjs",
+    "annotations",
+    "blocks",
+    "decorators",
+    "documents",
+    "fields",
+    "images",
+    "lists",
+    "marks",
+    "meta",
+    "navigation",
+    "objects",
+    "pages",
+    "styles"
+  ]
+}

@@ -6,7 +6,13 @@
 <Meta title="Heading" component={Heading} parameters={{ jest: ['Heading.test.ts'] }} />
 
 <Template let:args>
-	<Heading {...args}>This is a heading</Heading>
+	<Heading {...args}>Can you make the font a bit bigger and change it to times new roman?</Heading>
+	<p>
+		Jazz it up a little bit make the picture of the cupcake look delicious make the purple more
+		well, purple-er it looks so empty add some more hearts can you add a bit of pastel pink and baby
+		blue because the purple alone looks too fancy okay can you put a cute quote on the right side of
+		the site? oh no it looks messed up! i think we need to start from scratch.
+	</p>
 </Template>
 
 <Story name="H1" args={{ as: 'h1' }} />

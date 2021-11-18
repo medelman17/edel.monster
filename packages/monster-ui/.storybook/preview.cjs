@@ -5,8 +5,8 @@ import results from '../.jest-test-results.json';
 import { withTests } from '@storybook/addon-jest';
 // import '!style-loader!css-loader!sass-loader!./scss-loader.scss';
 
-import '../static/global.css';
-import '../src/app.css';
+// import '../static/global.css';
+import '../src/lib/css/global.css';
 
 export const decorators = [withTests({ results }), withInfo];
 

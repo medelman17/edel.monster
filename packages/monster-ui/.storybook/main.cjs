@@ -12,7 +12,7 @@ module.exports = {
 			}
 		},
 		'@storybook/addon-jest',
-		'@storybook/addon-cssresources',
+		// '@storybook/addon-cssresources',
 
 		// '@storybook/addon-storysource',
 		'@storybook/addon-a11y',

@@ -9,6 +9,7 @@ const config = {
 			postcss: true,
 			preserve: ['ld+json'],
 			scss: {
+				prependData: `@import 'src/lib/styles/variables/index.scss';`,
 				outputStyle: 'compressed'
 			}
 		})

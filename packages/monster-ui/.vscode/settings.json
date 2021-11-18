@@ -6,7 +6,7 @@
 	"files.associations": {
 		"*.css": "postcss"
 	},
-	"editor.formatOnSave": false,
+
 	"editor.codeActionsOnSave": {
 		"source.fixAll.eslint": true,
 		"source.fixAll.html": true
@@ -14,5 +14,17 @@
 	"stylelint.enable": true,
 	"stylelint.validate": ["css", "postcss"],
 	"typescript.disableAutomaticTypeAcquisition": true,
-	"javascript.format.enable": false
+	"javascript.format.enable": false,
+    "typescript.enablePromptUseWorkspaceTsdk": true,
+    "eslint.probe": [
+		"javascript",
+		"javascriptreact",
+		"typescript",
+		"typescriptreact",
+		"html",
+		"vue",
+		"markdown",
+		"svelte"
+	],
+
 }

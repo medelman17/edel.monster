@@ -12,12 +12,15 @@ module.exports = {
 			}
 		},
 		'@storybook/addon-jest',
+		'@storybook/addon-cssresources',
+
 		// '@storybook/addon-storysource',
 		'@storybook/addon-a11y',
 		'@washingtonpost/storybook-addon-web-vitals',
 		'@storybook/addon-links',
 		'@storybook/addon-essentials',
-		'@storybook/addon-svelte-csf'
+		'@storybook/addon-svelte-csf',
+		'@storybook/preset-scss'
 	],
 	webpackFinal: async (config) => {
 		const svelteLoader = config.module.rules.find(
@@ -25,7 +28,14 @@ module.exports = {
 		);
 		svelteLoader.options = {
 			...svelteLoader.options,
-			preprocess: sveltePreprocess({ postcss: true })
+			preprocess: sveltePreprocess({
+				postcss: true,
+				scss: {
+					prependData: `@import 'src/styles/variables/index.scss';`,
+					outputStyle: 'compressed'
+				},
+				preserve: ['ld+json']
+			})
 		};
 
 		return config;

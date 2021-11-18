@@ -1,14 +1,81 @@
 {
-    "name": "edel.monster",
-    "private": true,
-    "version": "0.0.1",
-    "scripts": {
-        "dev-studio": "cd studio && pnpm run start",
-        "dev-web": "cd web && pnpm run dev",
-        "dev": "concurrently \"pnpm:dev-*\"",
-        "preview": "cd web && pnpm run preview"
-    },
-    "devDependencies": {
-        "concurrently": "^6.4.0"
+  "name": "edel.monster",
+  "private": true,
+  "version": "0.0.1",
+  "scripts": {
+    "dev-studio": "cd studio && pnpm run start",
+    "dev-web": "cd web && pnpm run dev",
+    "dev": "concurrently \"pnpm:dev-*\"",
+    "preview": "cd web && pnpm run preview",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "concurrently": "^6.4.0",
+    "@babel/core": "^7.16.0",
+    "@babel/plugin-transform-modules-commonjs": "^7.16.0",
+    "@babel/preset-env": "^7.16.4",
+    "@sveltejs/kit": "next",
+    "@testing-library/jest-dom": "^5.15.0",
+    "@testing-library/svelte": "^3.0.3",
+    "@types/jest": "^27.0.2",
+    "@typescript-eslint/eslint-plugin": "^4.31.1",
+    "@typescript-eslint/parser": "^4.31.1",
+    "babel-jest": "^27.3.1",
+    "babel-loader": "^8.2.3",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-svelte3": "^3.2.1",
+    "jest": "^27.3.1",
+    "prettier": "^2.4.1",
+    "prettier-plugin-svelte": "^2.4.0",
+    "stylelint": "^14.1.0",
+    "stylelint-config-recommended": "^6.0.0",
+    "stylelint-config-standard": "^24.0.0",
+    "svelte": "^3.44.1",
+    "svelte-check": "^2.2.6",
+    "svelte-jester": "^2.1.5",
+    "svelte-loader": "^3.1.2",
+    "svelte-preprocess": "^4.9.8",
+    "svelte2tsx": "^0.4.10",
+    "ts-jest": "^27.0.7",
+    "tslib": "^2.3.1",
+    "typescript": "^4.4.4"
+  },
+  "jest": {
+    "verbose": false,
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "packages/src/**/*.ts",
+      "!**/node_modules/**",
+      "!**/partials/**",
+      "!**/fixture/**"
+    ],
+    "coveragePathIgnorePatterns": [
+      "node_modules",
+      "fixtures",
+      "build",
+      "package",
+      "static"
+    ],
+    "moduleFileExtensions": [
+      "js",
+      "ts",
+      "svelte",
+      "mdx"
+    ],
+    "setupFilesAfterEnv": [
+      "@testing-library/jest-dom/extend-expect"
+    ],
+    "transform": {
+      "^.+\\.svelte$": [
+        "svelte-jester",
+        {
+          "preprocess": true
+        }
+      ],
+      "^.+\\.ts$": "ts-jest",
+      "^.+\\.js$": "babel-jest",
+      "^.+\\.mdx$": "@storybook/addon-docs/jest-transform-mdx"
     }
+  }
 }

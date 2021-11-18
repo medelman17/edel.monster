@@ -4,13 +4,15 @@ const mode = process.env.NODE_ENV;
 const dev = mode === 'development';
 
 const config = {
+	syntax: 'postcss-scss',
+
 	plugins: [
 		require('postcss-import')(),
 		require('postcss-nesting'),
-		require('autoprefixer'),
+		require('autoprefixer')({ cascade: true }),
 		!dev &&
 			cssnano({
-				preset: 'default'
+				preset: 'advanced'
 			})
 	]
 };
